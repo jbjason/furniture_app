@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-class FurDBlackShadow extends StatelessWidget {
-  const FurDBlackShadow({Key? key}) : super(key: key);
+class DetailsBlackShadow extends StatelessWidget {
+  const DetailsBlackShadow({super.key});
 
   @override
   Widget build(BuildContext context) {

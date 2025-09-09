@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-class FurDImagesCounter extends StatelessWidget {
-  const FurDImagesCounter({Key? key, required this.images}) : super(key: key);
+class DetailsImagesCounter extends StatelessWidget {
+  const DetailsImagesCounter({super.key, required this.images});
   final List<String> images;
 
   @override

@@ -1,13 +1,14 @@
-import 'package:complex_ui/screens/furniture_ui/furniture.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_app/constant/my_color.dart';
+import 'package:furniture_app/constant/my_image.dart';
 
-class FurHCategory extends StatefulWidget {
-  const FurHCategory({Key? key}) : super(key: key);
+class HomeCategory extends StatefulWidget {
+  const HomeCategory({super.key});
   @override
-  State<FurHCategory> createState() => _FurHCategoryState();
+  State<HomeCategory> createState() => _HomeCategoryState();
 }
 
-class _FurHCategoryState extends State<FurHCategory> {
+class _HomeCategoryState extends State<HomeCategory> {
   int isSelect = 0;
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class _FurHCategoryState extends State<FurHCategory> {
                     borderRadius: BorderRadius.circular(16),
                     boxShadow: const [
                       BoxShadow(
-                        color: brownDark,
+                        color: MyColor.brownDark,
                         spreadRadius: 1,
                         blurRadius: 10,
                         offset: Offset(0, 5),
@@ -44,7 +45,7 @@ class _FurHCategoryState extends State<FurHCategory> {
                     gradient: const LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [brownLight, brownDark],
+                      colors: [MyColor.brownLight, MyColor.brownDark],
                     ),
                   ),
                   child: _currentWidget(i),
@@ -78,11 +79,12 @@ class _FurHCategoryState extends State<FurHCategory> {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: i == isSelect ? 13 : 10,
-              color: i == isSelect ? Colors.white : brownDark,
+              color: i == isSelect ? Colors.white : MyColor.brownDark,
               fontWeight: FontWeight.w400,
             ),
           ),
         )
-      : Image.asset('assets/furniture/fur_icon/icon$i.png',
-          fit: BoxFit.contain, color: i == isSelect ? Colors.white : brownDark);
+      : Image.asset('${MyImage.icon1Img}$i.png',
+          fit: BoxFit.contain,
+          color: i == isSelect ? Colors.white : MyColor.brownDark);
 }

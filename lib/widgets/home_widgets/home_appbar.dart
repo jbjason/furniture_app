@@ -1,8 +1,9 @@
-import 'package:complex_ui/screens/furniture_ui/furniture.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_app/constant/my_color.dart';
+import 'package:furniture_app/constant/my_image.dart';
 
-class FurHAppBar extends StatelessWidget {
-  const FurHAppBar({Key? key}) : super(key: key);
+class HomeAppbar extends StatelessWidget {
+  const HomeAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class FurHAppBar extends StatelessWidget {
               children: [
                 // Menu Button
                 Image.asset(
-                  'assets/furniture/fur_icon/menu.png',
+                  MyImage.menuImg,
                   width: 35,
                   fit: BoxFit.contain,
                 ),
@@ -31,10 +32,10 @@ class FurHAppBar extends StatelessWidget {
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30.0),
-                    color: orangeDark,
+                    color: MyColor.orangeDark,
                     boxShadow: const [
                       BoxShadow(
-                          color: orangeDark,
+                          color: MyColor.orangeDark,
                           spreadRadius: 1,
                           blurRadius: 20,
                           offset: Offset(2, 2)),
@@ -88,8 +89,8 @@ class FurHAppBar extends StatelessWidget {
           // Subtitle
           const Text(
             'Customized your favorite product',
-            style:
-                TextStyle(fontSize: 13, letterSpacing: 1.5, color: textColor),
+            style: TextStyle(
+                fontSize: 13, letterSpacing: 1.5, color: MyColor.textColor),
           ),
         ],
       ),

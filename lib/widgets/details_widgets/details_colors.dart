@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FurDColors extends StatelessWidget {
-  const FurDColors({Key? key, required this.colors}) : super(key: key);
+class DetailsColors extends StatelessWidget {
+  const DetailsColors({super.key, required this.colors});
   final List<Color> colors;
 
   @override

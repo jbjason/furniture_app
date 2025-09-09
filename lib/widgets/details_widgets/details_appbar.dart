@@ -1,8 +1,8 @@
-import 'package:complex_ui/screens/furniture_ui/furniture.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_app/constant/my_color.dart';
 
-class FurDAppBar extends StatelessWidget {
-  const FurDAppBar({Key? key, required this.title}) : super(key: key);
+class DetailsAppbar extends StatelessWidget {
+  const DetailsAppbar({super.key, required this.title});
   final String title;
   @override
   Widget build(BuildContext context) {
@@ -30,6 +30,6 @@ class FurDAppBar extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10), color: Colors.white),
-        child: Icon(icon, color: brownDark),
+        child: Icon(icon, color: MyColor.brownDark),
       );
 }

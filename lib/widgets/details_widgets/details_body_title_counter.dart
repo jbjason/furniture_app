@@ -1,8 +1,8 @@
-import 'package:complex_ui/screens/furniture_ui/furniture.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_app/constant/my_color.dart';
 
-class FurDBodyTitleCounter extends StatelessWidget {
-  const FurDBodyTitleCounter({Key? key, required this.title}) : super(key: key);
+class DetailsBodyTitleCounter extends StatelessWidget {
+  const DetailsBodyTitleCounter({super.key, required this.title});
   final String title;
 
   @override
@@ -29,11 +29,11 @@ class FurDBodyTitleCounter extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const [
-              Icon(Icons.remove, color: brownDark),
+              Icon(Icons.remove, color: MyColor.brownDark),
               SizedBox(width: 5),
-              Text('01', style: TextStyle(color: brownDark)),
+              Text('01', style: TextStyle(color: MyColor.brownDark)),
               SizedBox(width: 5),
-              Icon(Icons.add, color: brownDark),
+              Icon(Icons.add, color: MyColor.brownDark),
             ],
           ),
         ),

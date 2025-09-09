@@ -1,11 +1,11 @@
-import 'package:complex_ui/screens/furniture_ui/fur_home/furh_appbar.dart';
-import 'package:complex_ui/screens/furniture_ui/fur_home/furh_category.dart';
-import 'package:complex_ui/screens/furniture_ui/fur_home/furh_products.dart';
 import 'package:flutter/material.dart';
-import 'package:complex_ui/screens/furniture_ui/fur_home/furh_navbar.dart';
+import 'package:furniture_app/widgets/home_widgets/home_appbar.dart';
+import 'package:furniture_app/widgets/home_widgets/home_category.dart';
+import 'package:furniture_app/widgets/home_widgets/home_navbar.dart';
+import 'package:furniture_app/widgets/home_widgets/home_products.dart';
 
-class FurHomeScreen extends StatelessWidget {
-  const FurHomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key}) ;
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +18,19 @@ class FurHomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: const [
               // Appbar ,Title & Subtile
-              FurHAppBar(),
+              HomeAppbar(),
               SizedBox(height: 3),
               // category
-              FurHCategory(),
+              HomeCategory(),
               SizedBox(height: 10),
               // products List
-              FurHProducts(),
+              HomeProducts(),
             ],
           ),
         ),
       ),
       extendBody: true,
-      bottomNavigationBar: const FurHNavBar(),
+      bottomNavigationBar: const HomeNavbar(),
     );
   }
 }

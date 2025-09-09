@@ -1,10 +1,11 @@
-import 'package:complex_ui/screens/furniture_ui/fur_details/furd_body_title_counter.dart';
-import 'package:complex_ui/screens/furniture_ui/fur_details/furd_colors.dart';
-import 'package:complex_ui/screens/furniture_ui/furniture.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_app/constant/my_color.dart';
+import 'package:furniture_app/models/furniture.dart';
+import 'package:furniture_app/widgets/details_widgets/details_body_title_counter.dart';
+import 'package:furniture_app/widgets/details_widgets/details_colors.dart';
 
-class FurDBody extends StatelessWidget {
-  const FurDBody({Key? key, required this.furniture}) : super(key: key);
+class DetailsBody extends StatelessWidget {
+  const DetailsBody({super.key, required this.furniture});
   final Furniture furniture;
 
   @override
@@ -21,17 +22,17 @@ class FurDBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // colors
-          FurDColors(colors: furniture.colors),
+          DetailsColors(colors: furniture.colors),
           const SizedBox(height: 30),
           // Title & Quantity counter
-          FurDBodyTitleCounter(title: furniture.title),
+          DetailsBodyTitleCounter(title: furniture.title),
           const SizedBox(height: 20),
           // details
           Text(
             furniture.details,
             maxLines: 4,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(color: textColor),
+            style: const TextStyle(color: MyColor.textColor),
           ),
           const Spacer(),
           // Price & Cart button
@@ -50,11 +51,12 @@ class FurDBody extends StatelessWidget {
               children: [
                 Text(
                   furniture.price,
-                  style: const TextStyle(color: brownDark, fontSize: 26),
+                  style:
+                      const TextStyle(color: MyColor.brownDark, fontSize: 26),
                 ),
                 const Text(
                   'Total Payble',
-                  style: TextStyle(color: textColor),
+                  style: TextStyle(color: MyColor.textColor),
                 ),
               ],
             ),
@@ -65,10 +67,10 @@ class FurDBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30.0),
-              color: orangeDark,
+              color: MyColor.orangeDark,
               boxShadow: const [
                 BoxShadow(
-                  color: orangeDark,
+                  color: MyColor.orangeDark,
                   spreadRadius: 1,
                   blurRadius: 30,
                 ),
